@@ -8,6 +8,7 @@ const User = require('../models/user');
 
 const CONFLICT_KEY_CODE = 11000;
 const SALT_ROUNDS = 10;
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 function getUsers(_req, res, next) {
   User.find({})
@@ -107,7 +108,7 @@ function login(req, res, next) {
   const { email, password } = req.body;
   return User.findUserByCredentials(email, password)
     .then((user) => {
-      const token = jsonwebtoken.sign({ _id: user._id }, 'some-secret-salt', { expiresIn: '7d' });
+      const token = jsonwebtoken.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' });
       res.cookie('jwt', token, {
         maxAge: 3600000,
         httpOnly: true,
