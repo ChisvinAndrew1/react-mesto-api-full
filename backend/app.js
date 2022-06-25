@@ -67,8 +67,11 @@ app.post('/signin', celebrate({
     password: Joi.string().required(),
   }),
 }), login);
-app.use(auth);
 
+app.use(auth);
+app.get('/signout', (_req, res) => {
+  res.clearCookie('jwt').send({ message: 'Выход' });
+});
 app.use('/users', require('./routers/users'));
 app.use('/', require('./routers/cards'));
 

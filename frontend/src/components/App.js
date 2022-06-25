@@ -129,8 +129,11 @@ function App() {
 
   function handleLogOut() {
     // localStorage.removeItem("jwt");
-    setLoggedIn(false);
-    history.push("/sign-in");
+    auth.signout()
+    .then(() => {
+      setLoggedIn(false);
+      history.push("/sign-in");
+    }) 
   }
 
   function handleRegistration(data) {

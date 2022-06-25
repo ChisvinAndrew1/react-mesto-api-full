@@ -117,9 +117,6 @@ function login(req, res, next) {
       res.send({ token });
     })
     .catch((err) => next(err));
-  // if (err.name === 'ValidationError') {
-  // }
-  // return next(new SomeError());
 }
 
 function getMeInfo(req, res, next) {
