@@ -14,12 +14,12 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 mongoose.connect('mongodb://localhost:27017/mestodb');
-const { PORT = 3001 } = process.env;
+const { PORT = 3000 } = process.env;
 const allowedCors = [
   'https://praktikum.tk',
   'http://praktikum.tk',
-  'localhost:3000',
-  'http://localhost:3000',
+  'localhost:3001',
+  'http://localhost:3001',
   'https://domainname.chisvin.nomoredomains.xyz',
   'https://api.domainname.chisvin.nomoredomains.xyz',
 ];
