@@ -1,0 +1,10 @@
+.popup__container_type_image {
+  max-width: fit-content;
+  max-height: fit-content;
+  position: relative;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  width: initial;
+}
+

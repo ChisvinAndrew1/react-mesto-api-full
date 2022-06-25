@@ -1,0 +1,5 @@
+.card__el-stroke {
+  margin: 22px 20px 22px 0;
+  display: flex;
+  flex-direction: column;
+}

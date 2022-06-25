@@ -1,0 +1,15 @@
+.card__stroke {
+  background: url(../../../images/stroke1.svg) no-repeat center center/cover;
+  width: 22px;
+  height: 19px;
+  margin-bottom: 3px;
+  border: none;
+  padding: 0;
+  transition: opacity 1s ease;
+  cursor: pointer;
+}
+
+.card__stroke:hover {
+  opacity: .6;
+}
+

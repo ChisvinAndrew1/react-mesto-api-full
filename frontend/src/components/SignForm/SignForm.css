@@ -1,0 +1,37 @@
+.sign-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 358px;
+    margin: 60px auto 0;
+    min-height: 445px;
+    /* align-items: start; */
+    /* align-content:  start; */
+}
+
+.sign-form__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+
+.sign-form__submit {
+    background: white;
+    color: black;
+    margin-bottom: 15px;
+    margin-top: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .sign-form {
+        max-width: 260px;
+        margin: 0px auto 0;
+        min-height: 382px;
+    }
+}

@@ -1,0 +1,5 @@
+.popup__container_type_info {
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+}

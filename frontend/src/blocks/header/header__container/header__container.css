@@ -1,0 +1,12 @@
+.header__container {
+  margin-left: auto;
+  display: flex;
+  align-items: baseline;
+}
+
+@media screen and (max-width: 767px) {
+  .header__container {
+    flex-direction: column;
+    justify-items: center;
+  }
+}

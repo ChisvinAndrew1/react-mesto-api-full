@@ -1,0 +1,12 @@
+.profile__cover {
+  position: relative;
+  transition:  background-image 1s ease;
+  margin-right: 30px;
+}
+
+.profile__cover:hover {
+    background-image: url(../../../images/pen.svg);
+    background-size: 26px 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
