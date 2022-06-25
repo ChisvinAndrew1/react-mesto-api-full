@@ -21,6 +21,8 @@ const allowedCors = [
   'localhost:3001',
   'http://localhost:3001',
   'https://domainname.chisvin.nomoredomains.xyz',
+  'http://domainname.chisvin.nomoredomains.xyz',
+  'https://api.domainname.chisvin.nomoredomains.xyz',
   'https://api.domainname.chisvin.nomoredomains.xyz',
 ];
 console.log('ghsjkd');
@@ -70,11 +72,11 @@ app.use(auth);
 app.use('/users', require('./routers/users'));
 app.use('/', require('./routers/cards'));
 
-app.use(errorLogger);
-
 app.all('*', (_req, _res, next) => {
   next(new NotFoundError('Запрашиваемый ресурс не найден'));
 });
+app.use(errorLogger);
+
 app.use(errors());
 app.use(errorHandler);
 app.listen(PORT);
